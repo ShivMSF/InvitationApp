@@ -45,4 +45,6 @@ public without sharing class InvitationController {
     // public static Boolean submitResponse(Id invitationId, String name, String email) {
 
     // }
+
+    // Added a comment
 }
