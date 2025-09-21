@@ -1,0 +1,48 @@
+<template>
+    <div class="banner" style={bannerImage}>
+        <div class="main-details">
+            <section class="social">
+                <a href={facebookUrl} target="_blank" lwc:if={facebookUrl}>
+                    <img src={facebookImage} alt="Facebook"/>
+                </a>
+                <a href={twitterUrl} target="_blank" lwc:if={twitterUrl}>
+                    <img src={twitterImage} alt="Twitter"/>
+                </a>
+                <a href={instagramUrl} target="_blank" lwc:if={instagramUrl}>
+                    <img src={instagramImage} alt="Instagram"/>
+                </a>              
+                
+            </section>
+            <section class="event-info">
+                <p>{invitationDetails.Greeting_Message__c}</p>
+                <h1>{invitationDetails.Event_Introduction__c}
+                    <em>{invitationDetails.Event_Participants__c}</em>
+                </h1>
+                <h4><lightning-formatted-date-time
+                    value={invitationDetails.Event_Date_and_Time__c}
+                    year="numeric"
+                    day="2-digit"
+                    month="long"
+                    hour="2-digit"
+                    minute="2-digit"
+                >
+                </lightning-formatted-date-time></h4>
+            </section>
+            <section class="countdown">
+                <div class="counter">
+                    <div>{days}</div>days
+                </div>
+                <div class="counter">
+                    <div>{hours}</div>hours
+                </div>
+                <div class="counter">
+                    <div>{minutes}</div>minutes
+                </div>
+                <div class="counter">
+                    <div>{seconds}</div>seconds
+                </div>
+            </section>
+        </div>
+    </div>
+    
+</template>

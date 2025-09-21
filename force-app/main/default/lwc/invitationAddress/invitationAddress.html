@@ -1,0 +1,37 @@
+<template>
+    <div class="address_details">
+        <h2>Address</h2>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="6">
+                <div class="google-maps">
+                    <iframe src={addressDetails.Event_Map_URL__c}
+                    width="100%"
+                    height="100%"
+                    style="border:0"
+                    allowfullscreen
+                    loading="lazy"
+                    ></iframe>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6">
+                <section class="address">
+                    <p class="heading">Address</p>
+                    
+                    <p class="subtext">
+                        <lightning-icon icon-name="utility:location" alternative-text="location" size="x-small" 
+                    title="location" class="slds-m-right_x-small"></lightning-icon>
+                        {addressDetails.Event_Address__c}
+                    </p>
+                </section>
+                <section class="contact">
+                    <p class="heading">Contact</p>
+                    
+                    <p class="subtext">
+                        <lightning-icon icon-name="utility:phone_portrait" alternative-text="phone_portrait" size="x-small" 
+                    title="phone_portrait" class="slds-m-right_x-small"></lightning-icon>
+                    {addressDetails.Contact_Number__c}</p>
+                </section>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

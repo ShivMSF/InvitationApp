@@ -1,0 +1,96 @@
+.banner{
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.main-details{
+    padding: 70px 24px 24px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: serif;
+}
+
+.social{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    margin-bottom: 24px;
+}
+
+.event-info{
+    text-align: center;
+}
+
+.event-info p{
+    font-weight: 500;
+    color: #555;
+    font-size: 20px;
+    opacity: 0.8;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.event-info h1{
+    font-size: 28px;
+    font-weight: 500;
+    color: #447663;
+}
+
+.event-info h1>em{
+    font-size: 56px;
+    font-family: cursive;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+.event-info h4{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #555;
+}
+
+.countdown{
+    display: flex;
+    justify-content: space-between;
+    min-width: 420px;
+}
+
+.countdown .counter{
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 56px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 720px){
+    .countdown{
+        max-width: 380px;
+        justify-content: space-evenly;
+    }
+    .countdown .counter{
+        height: 40px;
+        width:40px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .banner{
+        background-size: inherit;
+    }
+    .event-info h1, .event-info h4{
+        font-size: 22px;
+    }
+    .event-info h1>em{
+        font-size: 32px;
+    }
+}
